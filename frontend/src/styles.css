@@ -203,3 +203,8 @@ header,.site-header,.nav-wrap{backdrop-filter:blur(18px)}
 @keyframes jawadFoil{0%,100%{background-position:0% center}50%{background-position:100% center}}
 @media(max-width:700px){.brand-icon{width:45px;height:45px}.brand strong{font-size:clamp(20px,5vw,25px);letter-spacing:.12em}}
 @media(prefers-reduced-motion:reduce){.brand strong{animation:none}}
+
+
+/* Dark, high-contrast signature wordmark */
+.brand strong{background:linear-gradient(110deg,#173c35 0%,#102e29 42%,#294c42 68%,#17352f 100%);background-size:100% auto;color:#173c35;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:#173c35;text-shadow:0 1px 0 #ffffff80;animation:none}
+.brand:hover strong{color:#0d2924;-webkit-text-fill-color:#0d2924}
