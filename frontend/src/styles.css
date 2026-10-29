@@ -69,3 +69,67 @@ body{background:var(--cream)}
  .brand strong{font-size:20px;letter-spacing:.11em}
  .brand small{font-size:8px;letter-spacing:.34em}
 }
+
+/* Immersive, colourful, dimensional storefront */
+:root{--forest:#153c34;--cream:#fff9ef;--paper:#fffdf8;--gold:#e5b85e;--coral:#d87858;--indigo:#465da0;--plum:#77517c;--mint:#cfe4d1}
+body{background:radial-gradient(ellipse at 12% 12%,#f7e3cf 0,transparent 32%),radial-gradient(ellipse at 88% 34%,#e3e8d8 0,transparent 34%),#fff9ef}
+.announcement{background:linear-gradient(105deg,#153c34 0%,#285e4c 48%,#5c4568 100%)}
+.nav-shell{height:96px}
+.brand{gap:13px;transition:transform .3s}
+.brand:hover{transform:translateY(-2px)}
+.brand-icon{width:54px;height:54px;font-size:31px;background:linear-gradient(145deg,#fff9e9,#f1dcb5);box-shadow:inset 0 2px 5px #fff,0 7px 18px #aa8c5126}
+.brand strong{font-size:30px;letter-spacing:.16em;font-weight:700;text-shadow:0 2px 0 #d5c5a5}
+.brand small{font-size:10px;letter-spacing:.48em;margin-top:5px}
+.hero{position:relative;isolation:isolate;padding-top:75px;padding-bottom:90px;gap:48px}
+.hero:before{content:"";position:absolute;z-index:-1;width:350px;height:350px;left:-190px;top:10px;border-radius:50%;background:radial-gradient(circle,#f1cfae99,transparent 68%);filter:blur(8px)}
+.hero h1{font-size:clamp(46px,5.3vw,76px);line-height:.99;letter-spacing:-.055em;text-shadow:0 2px 0 #fff,0 12px 25px #163d3510}
+.hero h1 em{background:linear-gradient(100deg,#c56e51,#d7a24e 48%,#82639b);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-sub{font-size:15px;line-height:1.95;max-width:490px}
+.hero-image-frame{position:relative;overflow:visible;border-radius:48% 48% 8px 8px;transform:perspective(1200px) rotateY(-4deg) rotateX(1deg);box-shadow:18px 26px 0 #d9b47735,0 35px 65px #203c2d26;transition:transform .6s,box-shadow .6s}
+.hero-image-frame:before{content:"";position:absolute;inset:-12px;border:1px solid #c99d5c88;border-radius:49% 49% 12px 12px;pointer-events:none;transform:translateZ(-20px)}
+.hero-image-frame:hover{transform:perspective(1200px) rotateY(0) translateY(-7px);box-shadow:22px 32px 0 #d9b47742,0 42px 75px #203c2d30}
+.hero-image-frame img{border-radius:inherit;filter:saturate(1.22) contrast(1.03)}
+.hero-floating-card{box-shadow:0 18px 40px #2e3c2a20;backdrop-filter:blur(12px);border:1px solid #fff9e5;transform:translateZ(40px);animation:cardFloat 5s ease-in-out infinite}
+@keyframes cardFloat{0%,100%{translate:0 0}50%{translate:0 -9px}}
+.hero-orbit{border-color:#d4a75f88;box-shadow:0 0 0 8px #d4a75f0c,0 0 28px #d4a75f17}
+.hero-stamp{box-shadow:0 8px 25px #ba99601a;transform:rotate(-11deg);background:#fff9efdd;backdrop-filter:blur(8px)}
+.button{transition:transform .25s,box-shadow .25s,filter .25s}
+.button:hover{transform:translateY(-3px);box-shadow:0 12px 28px #193c3026;filter:saturate(1.15)}
+.button-dark{background:linear-gradient(130deg,#153c34,#2c7054 70%,#4c7761);box-shadow:0 8px 20px #173d351c}
+.value-strip{background:linear-gradient(105deg,#f3dfc4,#e0eadb 40%,#eadcf0 72%,#f7dfd2);border-block:1px solid #fff}
+.value-icon{box-shadow:0 7px 16px #6b5b4015}
+.section-heading h2,.story-copy h2,.visit-intro h2{letter-spacing:-.045em}
+.section-heading h2 em,.story-copy h2 em,.visit-intro h2 em{background:linear-gradient(100deg,#c56e51,#b98c3c,#79609b);background-clip:text;-webkit-background-clip:text;color:transparent}
+.collections{position:relative}
+.collections:before{content:"✳";position:absolute;right:4%;top:35px;font-size:46px;color:#d5ad69;opacity:.5;animation:slowSpin 24s linear infinite}
+@keyframes slowSpin{to{transform:rotate(360deg)}}
+.filter{transition:all .25s;box-shadow:0 2px 8px #413b2d08}
+.filter:hover{transform:translateY(-2px);border-color:#d2ad6d}
+.filter.active{background:linear-gradient(130deg,#173d35,#367958);box-shadow:0 6px 16px #173d3524}
+.product-card{position:relative;transition:transform .35s}
+.product-card:hover{transform:translateY(-7px)}
+.product-image{overflow:hidden;box-shadow:0 12px 26px #493c2a0c;transition:box-shadow .35s,transform .35s}
+.product-card:hover .product-image{box-shadow:0 22px 38px #493c2a22}
+.product-image img{transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s;filter:saturate(1.18) contrast(1.02)}
+.product-card:hover .product-image img{transform:scale(1.07);filter:saturate(1.35) contrast(1.04)}
+.product-tag{box-shadow:0 5px 16px #1e2d201c;backdrop-filter:blur(10px)}
+.enquire-btn{box-shadow:0 5px 14px #286b4714;transition:all .25s}
+.enquire-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #286b4725}
+.story-section{background:linear-gradient(125deg,#f5e4d1,#e3eadb 55%,#e8ddef);position:relative;overflow:hidden}
+.story-image img{box-shadow:18px 18px 0 #c9a05c38,0 25px 45px #334a3320;filter:saturate(1.2)}
+.story-image-label{box-shadow:0 12px 26px #243b2d1c}
+.contact-card{border:1px solid #fff;box-shadow:0 25px 65px #34472e1a;transition:transform .3s}
+.contact-card:hover{transform:translateY(-4px)}
+.contact-pin{box-shadow:0 7px 16px #426d481c}
+.full-whatsapp{box-shadow:0 8px 18px #416c3512;transition:transform .25s}
+.full-whatsapp:hover{transform:translateY(-2px)}
+.closing-banner{background:radial-gradient(circle at 80% 15%,#a078a44a,transparent 28%),linear-gradient(115deg,#143b33,#2e6750 55%,#684c70);box-shadow:inset 0 1px #ffffff24}
+.closing-banner:before{content:"";position:absolute;inset:12px;border:1px solid #e4c27c48;pointer-events:none}
+.closing-flower{filter:drop-shadow(0 0 15px #e8c47850);animation:softPulse 4s ease-in-out infinite}
+@keyframes softPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.floating-whatsapp{box-shadow:0 12px 30px #14653f45,0 0 0 5px #1f87551a;transition:transform .25s,box-shadow .25s}
+.floating-whatsapp:hover{transform:translateY(-4px) scale(1.025);box-shadow:0 18px 38px #14653f50,0 0 0 8px #1f87551a}
+.modal-backdrop{backdrop-filter:blur(10px)}
+.product-modal{box-shadow:0 35px 100px #111b173d}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+@media(max-width:700px){.nav-shell{height:78px}.brand-icon{width:44px;height:44px;font-size:26px}.brand strong{font-size:23px;letter-spacing:.12em}.brand small{font-size:8px;letter-spacing:.37em}.hero{padding-top:42px}.hero h1{font-size:clamp(39px,10vw,55px)}.hero-image-frame{transform:none}.hero-image-frame:hover{transform:translateY(-3px)}}
