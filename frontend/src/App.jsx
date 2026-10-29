@@ -54,29 +54,29 @@ export default function App() {
     <main>
       <section className="hero">
         <div className="hero-copy">
-          <div className="eyebrow"><span className="eyebrow-line"/> THE ART OF INDIAN TEXTILES</div>
-          <h1>Tradition, <em>woven</em><br/>into every thread.</h1>
-          <p className="hero-sub">Discover beautiful handloom-inspired sarees, timeless fabrics and colourful classics that make every moment feel special.</p>
+          <div className="eyebrow"><span className="eyebrow-line"/> HANDWOVEN TEXTILES FOR YOUR HOME</div>
+          <h1>Bring home the beauty<br/>of <em>Indian handlooms.</em></h1>
+          <p className="hero-sub">Discover handwoven bedsheets, cushion covers, curtains, quilts and everyday home linens inspired by India's rich textile traditions.</p>
           <div className="hero-buttons"><a href="#collections" className="button button-dark">Explore collections <ArrowRight size={17}/></a><a href="#visit" className="button button-quiet">Find our store <MapPin size={16}/></a></div>
-          <div className="hero-proof"><div className="proof-icon"><Sparkles size={19}/></div><div><strong>Colourful by nature.</strong><span>Timeless by tradition.</span></div><div className="proof-divider"/><div><strong>Made for moments</strong><span>Big and beautifully everyday.</span></div></div>
+          <div className="hero-proof"><div className="proof-icon"><Sparkles size={19}/></div><div><strong>Natural textures.</strong><span>Comfort for everyday living.</span></div><div className="proof-divider"/><div><strong>Made for your home</strong><span>Thoughtful textiles for every room.</span></div></div>
           <span className="hero-stamp">A LITTLE<br/>INDIAN<br/><b>HERITAGE</b></span>
         </div>
         <div className="hero-visual">
-          <div className="hero-image-frame"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1300&q=90" alt="Colourful traditional Indian textile and saree styling"/></div>
+          <div className="hero-image-frame"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1300&q=90" alt="Handloom-inspired bedding and warm home furnishings"/></div>
           <div className="hero-floating-card"><span className="floating-flower">✿</span><div><small>THE JAWAD EDIT</small><strong>Elegance that<br/>never fades.</strong></div></div>
           <div className="hero-side-note">TEXTURE · COLOUR · CULTURE</div><div className="hero-orbit orbit-one"/><div className="hero-orbit orbit-two"/>
         </div>
       </section>
 
       <section className="value-strip" aria-label="Store highlights">
-        <div><span className="value-icon"><Sparkles/></span><p><strong>Tradition-inspired styles</strong><small>Classics for every occasion</small></p></div>
-        <div><span className="value-icon"><Heart/></span><p><strong>Colourful collections</strong><small>Find a look that feels like you</small></p></div>
+        <div><span className="value-icon"><Sparkles/></span><p><strong>Handloom home essentials</strong><small>Timeless textiles for every room</small></p></div>
+        <div><span className="value-icon"><Heart/></span><p><strong>Craft-inspired designs</strong><small>Bring warmth and character home</small></p></div>
         <div><span className="value-icon"><MessageCircle/></span><p><strong>Personal assistance</strong><small>Enquire directly on WhatsApp</small></p></div>
         <div><span className="value-icon"><MapPin/></span><p><strong>Visit us in Bengaluru</strong><small>Shivajinagar, Bengaluru</small></p></div>
       </section>
 
       <section id="collections" className="collections section-wrap">
-        <div className="section-heading"><div><div className="eyebrow"><span className="eyebrow-line"/> FIND YOUR FAVOURITE</div><h2>Collections with <em>character.</em></h2><p>From everyday comfort to celebration-ready colour, find your next favourite.</p></div><a href="#visit" className="text-link">Need help choosing? <ArrowUpRight size={16}/></a></div>
+        <div className="section-heading"><div><div className="eyebrow"><span className="eyebrow-line"/> FIND YOUR FAVOURITE</div><h2>Handloom essentials for <em>every corner.</em></h2><p>From restful bedrooms to welcoming living spaces, discover textiles that bring comfort, colour and character into your home.</p></div><a href="#visit" className="text-link">Need help choosing? <ArrowUpRight size={16}/></a></div>
         <div className="collection-tools">
           <div className="filters" role="group" aria-label="Filter products">{categories.map(c => <button key={c} className={category === c ? 'filter active' : 'filter'} onClick={() => setCategory(c)}>{c}</button>)}</div>
           <label className="search-box"><Search size={17}/><input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search the collection..." aria-label="Search products"/>{search && <button onClick={() => setSearch('')} aria-label="Clear search"><X size={15}/></button>}</label>
@@ -95,7 +95,7 @@ export default function App() {
 
       <section className="story-section" id="story">
         <div className="story-image"><img src="https://images.unsplash.com/photo-1605289355680-75fb412e7b8a?auto=format&fit=crop&w=1100&q=85" alt="Colourful woven fabric textures" loading="lazy"/><div className="story-image-label"><span>✳</span> THE BEAUTY IS IN THE DETAILS</div></div>
-        <div className="story-copy"><div className="eyebrow"><span className="eyebrow-line"/> OUR PHILOSOPHY</div><h2>Not just fabric.<br/><em>A feeling.</em></h2><p>Some things never go out of style: a colour that makes you smile, a texture you want to touch, and a piece that feels like it was meant for you.</p><p>At Jawad Handlooms, we invite you to explore a world of expressive colour and traditional textile inspiration. Come by, browse at your own pace, and let us help you find something special.</p><a className="button button-dark" href={waLink('Hello Jawad Handlooms! I would love to know more about your collections.')} target="_blank" rel="noreferrer">Let's find your style <ArrowRight size={17}/></a><div className="story-signature">The Jawad Handlooms team <span>♥</span></div></div>
+        <div className="story-copy"><div className="eyebrow"><span className="eyebrow-line"/> OUR PHILOSOPHY</div><h2>Tradition in every weave.<br/><em>Comfort in every room.</em></h2><p>Beautiful homes begin with thoughtful details: soft cotton, rich woven textures, and colours that make every room feel welcoming.</p><p>At Jawad Handlooms, discover home furnishings inspired by India's textile traditions—from bedding and curtains to cushions, dhurries and everyday linens.</p><a className="button button-dark" href={waLink('Hello Jawad Handlooms! I would love to know more about your collections.')} target="_blank" rel="noreferrer">Find your home textiles <ArrowRight size={17}/></a><div className="story-signature">The Jawad Handlooms team <span>♥</span></div></div>
       </section>
 
       <section className="visit-section section-wrap" id="visit">
@@ -107,10 +107,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="closing-banner"><div className="closing-flower">✿</div><div><span>YOUR STORY, YOUR STYLE</span><h2>Wear a little <em>wonder.</em></h2></div><a href="#collections" className="button button-light">Explore the edit <ArrowRight size={17}/></a><div className="closing-pattern">✳ ✳ ✳ ✳ ✳</div></section>
+      <section className="closing-banner"><div className="closing-flower">✿</div><div><span>YOUR STORY, YOUR STYLE</span><h2>Bring home a little <em>heritage.</em></h2></div><a href="#collections" className="button button-light">Explore collections <ArrowRight size={17}/></a><div className="closing-pattern">✳ ✳ ✳ ✳ ✳</div></section>
     </main>
 
-    <footer className="footer"><div className="footer-main"><BrandMark/><p>Colour, craft and character.<br/>Find a little tradition to call your own.</p><div className="footer-links"><a href="#collections">Collections</a><a href="#story">Our story</a><a href="#visit">Contact</a></div><a className="footer-social" href={waLink('Hello Jawad Handlooms!')} target="_blank" rel="noreferrer"><MessageCircle size={17}/> WhatsApp</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jawad Handlooms. All rights reserved.</span><span>Made with care in Bengaluru, India <span className="india-heart">♥</span></span></div></footer>
+    <footer className="footer"><div className="footer-main"><BrandMark/><p>Handloom home furnishings with colour, craft and character.</p><div className="footer-links"><a href="#collections">Collections</a><a href="#story">Our story</a><a href="#visit">Contact</a></div><a className="footer-social" href={waLink('Hello Jawad Handlooms!')} target="_blank" rel="noreferrer"><MessageCircle size={17}/> WhatsApp</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jawad Handlooms. All rights reserved.</span><span>Made with care in Bengaluru, India <span className="india-heart">♥</span></span></div></footer>
 
     <a className="floating-whatsapp" href={waLink('Hello Jawad Handlooms! I would like to enquire about your collection.')} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={24}/><span>Chat with us</span></a>
     {toast && <div className="toast"><Check size={16}/>{toast}</div>}
