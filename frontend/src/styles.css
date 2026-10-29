@@ -133,3 +133,47 @@ body{background:radial-gradient(ellipse at 12% 12%,#f7e3cf 0,transparent 32%),ra
 .product-modal{box-shadow:0 35px 100px #111b173d}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 @media(max-width:700px){.nav-shell{height:78px}.brand-icon{width:44px;height:44px;font-size:26px}.brand strong{font-size:23px;letter-spacing:.12em}.brand small{font-size:8px;letter-spacing:.37em}.hero{padding-top:42px}.hero h1{font-size:clamp(39px,10vw,55px)}.hero-image-frame{transform:none}.hero-image-frame:hover{transform:translateY(-3px)}}
+
+/* WOW mode: luminous textile atelier, aurora gradients and AI-inspired motion */
+:root{--forest:#102f2b;--cream:#fbf5eb;--gold:#ffd27a;--coral:#ff896b;--indigo:#7c83ff;--plum:#b477c9;--mint:#7de3c3}
+body{background:linear-gradient(125deg,#fff7ec 0%,#f3e8fb 26%,#e5f4ed 54%,#fff0e5 78%,#f6e9ff 100%);background-size:240% 240%;animation:pageAurora 24s ease infinite}
+@keyframes pageAurora{0%,100%{background-position:0% 40%}50%{background-position:100% 60%}}
+.announcement{background:linear-gradient(100deg,#102f2b,#38458b 48%,#854a79);background-size:200% 200%;animation:bannerFlow 10s ease infinite}
+@keyframes bannerFlow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+header,.site-header,.nav-wrap{backdrop-filter:blur(18px)}
+.nav-shell{background:#fffaf0d9;backdrop-filter:blur(20px);border-bottom:1px solid #fff9}
+.brand strong{font-size:clamp(27px,3vw,36px);font-weight:800;letter-spacing:.14em;background:linear-gradient(105deg,#123b33,#98652b 45%,#79508e 75%,#123b33);background-size:200% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:brandSheen 7s linear infinite}
+@keyframes brandSheen{to{background-position:200% center}}
+.brand-icon{width:58px;height:58px;font-size:33px;border:1px solid #d6b36c;background:linear-gradient(145deg,#fffdf6,#e8d5ad 50%,#f7e7c8);box-shadow:0 8px 0 #c6a15b30,0 15px 32px #55407820,inset 0 2px 3px #fff;transform:translateY(-2px)}
+.hero{isolation:isolate}
+.hero:after{content:"";position:absolute;z-index:-1;inset:-25px -4vw auto auto;width:min(60vw,760px);height:min(60vw,760px);border-radius:50%;background:conic-gradient(from 30deg,#ffbd7c38,#a8a7ff35,#6be5c735,#f4a7c835,#ffbd7c38);filter:blur(45px);animation:auroraOrbit 18s linear infinite;pointer-events:none}
+@keyframes auroraOrbit{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(49px,6.2vw,88px);text-shadow:0 2px 0 #fff,0 14px 32px #43356a16}
+.hero h1 em{background:linear-gradient(100deg,#ff7b5e,#d89a37 28%,#805cbd 62%,#239b83);background-size:240% auto;animation:brandSheen 8s linear infinite;background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-image-frame{border:1px solid #fff8;box-shadow:18px 26px 0 #d6a65c40,0 32px 70px #5a3e7628,0 0 45px #f1bd8645;transform:perspective(1300px) rotateY(-5deg) rotateX(2deg);animation:heroFloat 7s ease-in-out infinite}
+@keyframes heroFloat{0%,100%{transform:perspective(1300px) rotateY(-5deg) rotateX(2deg) translateY(0)}50%{transform:perspective(1300px) rotateY(-2deg) rotateX(0) translateY(-9px)}}
+.hero-image-frame:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(125deg,#ffffff30,transparent 30%,transparent 65%,#f5c87820);pointer-events:none}
+.hero-image-frame img{filter:saturate(1.3) contrast(1.04)}
+.hero-floating-card{background:linear-gradient(135deg,#fffdf0ed,#f2e6f8e8);border:1px solid #fff;box-shadow:0 18px 50px #46375b25,0 0 25px #fff8;backdrop-filter:blur(18px)}
+.hero-orbit{border:1px solid #b58cda99;box-shadow:0 0 0 9px #c0a2ec15,0 0 35px #a98bdc50}
+.button-dark{background:linear-gradient(110deg,#123b33,#315f80 55%,#744d82);background-size:200% auto;box-shadow:0 10px 26px #293f6540,0 0 0 1px #ffffff40 inset;transition:background-position .5s,transform .25s}
+.button-dark:hover{background-position:100% center}
+.value-strip{background:linear-gradient(100deg,#ffe2c5,#d9f1e4 35%,#e6ddff 68%,#ffdfdf);box-shadow:0 10px 40px #604e6310}
+.collections:before{color:#bb79a6;text-shadow:0 0 22px #d5a9e8}
+.filter{background:#fffdf5b8;backdrop-filter:blur(10px);border:1px solid #fff;box-shadow:0 5px 16px #4c3c6210}
+.filter.active{background:linear-gradient(110deg,#143b33,#405fa0,#875b92);box-shadow:0 8px 22px #4a457c36}
+.product-image{border:1px solid #fff;box-shadow:0 15px 32px #4e426018,0 0 0 1px #ffffffa6 inset}
+.product-card:hover .product-image{box-shadow:0 24px 48px #59446a25,0 0 24px #e4b0d32e}
+.product-card:hover .product-image img{transform:scale(1.09);filter:saturate(1.5) contrast(1.05)}
+.product-tag{background:#fffaf0e8;backdrop-filter:blur(14px);border:1px solid #fff}
+.enquire-btn{background:linear-gradient(115deg,#e0f4e7,#f2e5ff);color:#214d40;border:1px solid #fff;box-shadow:0 6px 17px #3d745018}
+.story-section{background:linear-gradient(125deg,#ffe8d2 0%,#e1f2e4 42%,#e8e2ff 74%,#ffe3e3 100%)}
+.story-image img{box-shadow:16px 18px 0 #c4a1e14a,0 28px 55px #354a4025}
+.contact-card{background:linear-gradient(145deg,#fffef8,#f4edfb);border:1px solid #fff;box-shadow:0 25px 65px #453b6520}
+.contact-pin{background:linear-gradient(135deg,#d9f3e5,#f0e4ff);color:#275c48}
+.closing-banner{background:radial-gradient(circle at 12% 5%,#e3bd6b40,transparent 30%),radial-gradient(circle at 90% 80%,#c28ce75c,transparent 35%),linear-gradient(115deg,#102f2b,#254d68 50%,#684276);box-shadow:0 22px 55px #342e5125,inset 0 1px #ffffff3b}
+.closing-banner:after{content:"✦   ✧   ✦";position:absolute;right:7%;top:16%;font-size:24px;letter-spacing:16px;color:#ffe3a7a8;text-shadow:0 0 22px #ffdc9a;animation:softPulse 4s ease-in-out infinite;pointer-events:none}
+.floating-whatsapp{box-shadow:0 12px 35px #14653f50,0 0 0 6px #ffffff90,0 0 30px #4bc58b70}
+.product-modal{border:1px solid #fff;box-shadow:0 35px 100px #17142e55}
+@media(max-width:700px){.brand strong{font-size:clamp(20px,5vw,25px);letter-spacing:.1em}.brand-icon{width:45px;height:45px;font-size:26px}.hero:after{width:90vw;height:90vw;filter:blur(30px)}.hero-image-frame{animation:none;transform:none}.hero-image-frame:hover{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){body,.announcement,.brand strong,.hero:after,.hero h1 em,.hero-image-frame,.closing-banner:after{animation:none!important}}
