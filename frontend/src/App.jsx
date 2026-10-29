@@ -83,14 +83,13 @@ export default function App() {
         </div>
         <div className="product-grid">{filtered.map((product, i) => <article className="product-card" key={product.id}>
           <button className="product-image" onClick={() => setSelected(product)} aria-label={`View ${product.name}`}>
-            <img src={product.image} alt={product.name} loading={i > 3 ? 'lazy' : 'eager'} onError={e => { e.currentTarget.src = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80' }}/>
+            <img src={product.image} alt={product.name} loading={i > 3 ? 'lazy' : 'eager'} onError={e => { e.currentTarget.src = 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=85' }}/>
             <span className={`product-tag ${product.tone}`}>{product.tag}</span><span className="quick-view">Quick view <ArrowUpRight size={14}/></span>
           </button>
           <div className="product-info"><div><span className="product-category">{product.category}</span><h3>{product.name}</h3></div><button className={saved.includes(product.id) ? 'save-btn saved' : 'save-btn'} onClick={() => toggleSaved(product.id)} aria-label={saved.includes(product.id) ? 'Remove from wishlist' : 'Save to wishlist'}><Heart size={17} fill={saved.includes(product.id) ? 'currentColor' : 'none'}/></button></div>
-          <p className="product-description">{product.description}</p><div className="product-bottom"><span className="price">₹{product.price.toLocaleString('en-IN')}<small> onwards*</small></span><button className="enquire-btn" onClick={() => enquire(product)}>Enquire <ArrowUpRight size={15}/></button></div>
+          <p className="product-description">{product.description}</p><div className="product-bottom"><span className="availability-note"><Sparkles size={13}/> Ask about colours & availability</span><button className="enquire-btn" onClick={() => enquire(product)}>Enquire <ArrowUpRight size={15}/></button></div>
         </article>)}</div>
         {filtered.length === 0 && <div className="empty-state"><Search size={25}/><h3>No matching pieces found</h3><p>Try a different search or select another category.</p><button className="button button-dark" onClick={() => {setCategory('All');setSearch('')}}>Show all collections</button></div>}
-        <p className="price-note">*Displayed prices are sample placeholders for the website preview. Please confirm actual prices and availability with the store before publishing.</p>
       </section>
 
       <section className="story-section" id="story">
@@ -114,6 +113,6 @@ export default function App() {
 
     <a className="floating-whatsapp" href={waLink('Hello Jawad Handlooms! I would like to enquire about your collection.')} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={24}/><span>Chat with us</span></a>
     {toast && <div className="toast"><Check size={16}/>{toast}</div>}
-    {selected && <div className="modal-backdrop" onClick={() => setSelected(null)}><div className="product-modal" role="dialog" aria-modal="true" aria-label={selected.name} onClick={e => e.stopPropagation()}><button className="modal-close" onClick={() => setSelected(null)} aria-label="Close"><X/></button><img src={selected.image} alt={selected.name}/><div className="modal-content"><span className="product-category">{selected.category}</span><h2>{selected.name}</h2><p>{selected.description}</p><strong className="modal-price">₹{selected.price.toLocaleString('en-IN')} <small>onwards*</small></strong><p className="modal-note">Please confirm current price, colours and availability with our team.</p><button className="button button-dark" onClick={() => enquire(selected)}>Enquire on WhatsApp <ArrowUpRight size={17}/></button></div></div></div>}
+    {selected && <div className="modal-backdrop" onClick={() => setSelected(null)}><div className="product-modal" role="dialog" aria-modal="true" aria-label={selected.name} onClick={e => e.stopPropagation()}><button className="modal-close" onClick={() => setSelected(null)} aria-label="Close"><X/></button><img src={selected.image} alt={selected.name}/><div className="modal-content"><span className="product-category">{selected.category}</span><h2>{selected.name}</h2><p>{selected.description}</p><div className="modal-availability"><Sparkles size={15}/> Ask us about colours, sizes & availability</div><p className="modal-note">Please confirm current price, colours and availability with our team.</p><button className="button button-dark" onClick={() => enquire(selected)}>Enquire on WhatsApp <ArrowUpRight size={17}/></button></div></div></div>}
   </div>
 }
