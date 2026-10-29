@@ -53,3 +53,19 @@ body{background:var(--cream)}
 .floating-whatsapp{background:linear-gradient(135deg,#218653,#176541);box-shadow:0 10px 30px #1c503740}
 .modal-availability{display:flex;align-items:center;gap:8px;background:#eef2e7;color:#346246;border-radius:4px;padding:12px;font-size:11px;margin:17px 0}
 @media(max-width:700px){.hero{padding-top:34px}.product-image{border-radius:4px 4px 18px 4px}.product-info h3{font-size:16px}.availability-note{font-size:8px}.enquire-btn{padding:8px}.collections{padding-top:65px}}
+
+/* Brand prominence and new floor-mat / wedding collections */
+.brand{gap:12px}
+.brand-icon{width:48px;height:48px;font-size:29px;flex-shrink:0}
+.brand strong{font-size:25px;letter-spacing:.14em;line-height:1.05}
+.brand small{font-size:10px;letter-spacing:.42em;margin-top:5px}
+.product-card:nth-child(5n+1) .product-image{background:#f1d9ce}
+.product-card:nth-child(5n+2) .product-image{background:#dce8d9}
+.product-card:nth-child(5n+3) .product-image{background:#e7dfef}
+.product-card:nth-child(5n+4) .product-image{background:#f2e5c9}
+.product-card:nth-child(5n) .product-image{background:#d8e6e8}
+@media(max-width:700px){
+ .brand-icon{width:40px;height:40px;font-size:24px}
+ .brand strong{font-size:20px;letter-spacing:.11em}
+ .brand small{font-size:8px;letter-spacing:.34em}
+}
